@@ -26,9 +26,11 @@ export class UserService {
         console.log('id', user)
 
 
-        return ({
-            ...createUserDto,
-            id: 1,
-        })
+        return user;
     }
+
+    async getAllUser(): Promise<User[]>{
+        return this.users;
+    }
+
 }
